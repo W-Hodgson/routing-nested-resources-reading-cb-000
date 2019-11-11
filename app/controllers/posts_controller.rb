@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    if params[:author_id]
   end
 
   def show
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  
+
 
 private
 
